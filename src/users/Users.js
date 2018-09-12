@@ -13,17 +13,13 @@ class Users extends Component {
     };
 
     makeMeYounger = () => {
-        // this.state.users[0].age -= 10;
-        // console.log("in makeMeYounger");
+        const { users } = this.state;
+        users.map((user)=>{
+            user.age = user.age + 10;
+        });
         this.setState({
-            users: [
-                {name:"ram", age:10},
-                {name:"abhi", age:20},
-                {name:"om", age:30},
-            ]
-
+            users: users
         })
-
     }
 
     render () {
